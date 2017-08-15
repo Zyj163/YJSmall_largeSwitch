@@ -3,8 +3,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - YJSmall_largeSwitch (0.1.0):
-    - YJTransition
+  - YJSmall_largeSwitch (0.1.0)
   - YJThief (0.8.0):
     - Masonry
     - YYCategories
@@ -38,7 +37,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  YJSmall_largeSwitch: 5fbfe51efb12401ec9bd8c2b82cd8b656f6b0835
+  YJSmall_largeSwitch: 1a307ffe17d1e85875df2cbb0addf6b33e3b4ce3
   YJThief: 3b5f2c243b7eb63be89d2b5c1d7538ae6a6fd7e2
   YJTransition: 24ede909a9d570e618fd6585d1c2f236b8a31d3b
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd

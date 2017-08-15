@@ -18,10 +18,5 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "YJSmall_largeSwitch/Classes/**/*",
-  "dependencies": {
-    "YJTransition": [
-
-    ]
-  }
+  "source_files": "YJSmall_largeSwitch/Classes/**/*"
 }
