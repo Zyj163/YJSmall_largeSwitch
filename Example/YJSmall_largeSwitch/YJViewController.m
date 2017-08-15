@@ -7,8 +7,14 @@
 //
 
 #import "YJViewController.h"
+#import "YJTestViewController.h"
+#import "YJSwitchModel.h"
 
-@interface YJViewController ()
+#import "YJTransition.h"
+
+@interface YJViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray *largeModels;
 
 @end
 
@@ -17,13 +23,50 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+	layout.itemSize = CGSizeMake(50, 50);
+	layout.minimumLineSpacing = 10;
+	layout.minimumInteritemSpacing = 10;
+	UICollectionView *c = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+	c.dataSource = self;
+	c.delegate = self;
+	[c registerClass:[YJSmall_largeCell class] forCellWithReuseIdentifier:@"cell"];
+	[self.view addSubview:c];
+	
+	self.largeModels = @[].mutableCopy;
+	
+	for (NSInteger idx = 0; idx < 10; idx ++) {
+		YJSwitchModel *switchModel = [YJSwitchModel new];
+		switchModel.w = 100;
+		switchModel.h = 100;
+		[self.largeModels addObject:switchModel];
+	}
 }
 
-- (void)didReceiveMemoryWarning
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	return self.largeModels.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+	cell.backgroundColor = [UIColor redColor];
+	return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	YJSmall_largeCell *cell = (YJSmall_largeCell *)[collectionView cellForItemAtIndexPath:indexPath];
+	YJTestViewController *largeVc = [YJTestViewController small_largeViewControllerWithModels:self.largeModels cellClass:nil];
+	[largeVc yj_customModalWithAnimationType:YJTransAnimationTypeSizeToSize andDuration:0.25 animationIfNeed:nil];
+	largeVc.view.yj_maskCenter = [YJSmall_largeHelper calculateMaskCenterWithView:cell inView:nil];
+	largeVc.view.yj_maskSize = CGSizeMake(50, 50);
+	largeVc.currentIndexPath = indexPath;
+//	largeVc.delegate = self;
+	[self presentViewController:largeVc animated:YES completion:nil];
+
 }
 
 @end

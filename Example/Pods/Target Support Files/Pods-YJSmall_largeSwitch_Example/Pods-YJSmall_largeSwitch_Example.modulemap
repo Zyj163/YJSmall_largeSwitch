@@ -1,0 +1,6 @@
+framework module Pods_YJSmall_largeSwitch_Example {
+  umbrella header "Pods-YJSmall_largeSwitch_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

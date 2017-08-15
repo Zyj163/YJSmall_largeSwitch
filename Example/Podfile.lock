@@ -1,0 +1,48 @@
+PODS:
+  - Masonry (1.0.2)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - YJSmall_largeSwitch (0.1.0):
+    - YJTransition
+  - YJThief (0.8.0):
+    - Masonry
+    - YYCategories
+  - YJTransition (0.1.0)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - SDWebImage
+  - YJSmall_largeSwitch (from `../`)
+  - YJThief (from `https://github.com/Zyj163/YJThief.git`)
+  - YJTransition (from `https://github.com/Zyj163/YJTransition.git`)
+
+EXTERNAL SOURCES:
+  YJSmall_largeSwitch:
+    :path: "../"
+  YJThief:
+    :git: https://github.com/Zyj163/YJThief.git
+  YJTransition:
+    :git: https://github.com/Zyj163/YJTransition.git
+
+CHECKOUT OPTIONS:
+  YJThief:
+    :commit: b74b84418eeed5c77954e10176e8a36929358566
+    :git: https://github.com/Zyj163/YJThief.git
+  YJTransition:
+    :commit: 1d9ba56fb4947e13ff999c3859ee2128fbd480f9
+    :git: https://github.com/Zyj163/YJTransition.git
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YJSmall_largeSwitch: 5fbfe51efb12401ec9bd8c2b82cd8b656f6b0835
+  YJThief: 3b5f2c243b7eb63be89d2b5c1d7538ae6a6fd7e2
+  YJTransition: 24ede909a9d570e618fd6585d1c2f236b8a31d3b
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: e058c9d36d70c01c7484ececa68d725f853376fe
+
+COCOAPODS: 1.2.1

@@ -2,10 +2,12 @@ use_frameworks!
 
 target 'YJSmall_largeSwitch_Example' do
   pod 'YJSmall_largeSwitch', :path => '../'
-
+  pod 'YJTransition', :git => 'https://github.com/Zyj163/YJTransition.git'
+  pod 'SDWebImage'
+  pod 'YJThief', :git => 'https://github.com/Zyj163/YJThief.git'
   target 'YJSmall_largeSwitch_Tests' do
     inherit! :search_paths
 
-    
+
   end
 end

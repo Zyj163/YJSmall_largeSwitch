@@ -1,0 +1,6 @@
+framework module Pods_YJSmall_largeSwitch_Tests {
+  umbrella header "Pods-YJSmall_largeSwitch_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

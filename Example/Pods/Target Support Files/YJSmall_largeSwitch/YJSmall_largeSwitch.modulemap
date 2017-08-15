@@ -1,0 +1,6 @@
+framework module YJSmall_largeSwitch {
+  umbrella header "YJSmall_largeSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}
