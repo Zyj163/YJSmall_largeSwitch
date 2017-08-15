@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YJSmall_largeSwitch_Example' do
+  pod 'YJSmall_largeSwitch', :path => '../'
+
+  target 'YJSmall_largeSwitch_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
